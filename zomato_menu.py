@@ -7,6 +7,7 @@ header = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:74.0) Gecko/
 url_half = r'https://www.zomato.com/bangalore/'
 
 df = pd.read_excel(r'/home/rahul/PythonProject/venv/Zomato_data.xlsx', index_col=0)
+#Replace file_path of read_excel with your path
 df_nodup = df.drop_duplicates(keep='first', inplace=False)
 
 name_list = df_nodup.loc[:, 'Name'].drop_duplicates(keep='first', inplace=False).tolist()
